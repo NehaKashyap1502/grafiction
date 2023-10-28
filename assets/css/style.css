@@ -25,7 +25,7 @@ body {
   position: absolute;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
-  animation: cursorAnim .5s infinite alternate;
+  animation: cursorAnim 0.5s infinite alternate;
   pointer-events: none;
 }
 
@@ -36,10 +36,10 @@ body {
   position: absolute;
   border: 3px solid var(--primary);
   border-radius: 50%;
-  opacity: .5;
+  opacity: 0.5;
   top: -2px;
   left: -2px;
-  animation: cursorAnim2 .5s infinite alternate;
+  animation: cursorAnim2 0.5s infinite alternate;
 }
 
 @keyframes cursorAnim {
@@ -48,7 +48,7 @@ body {
   }
 
   to {
-    transform: scale(.7);
+    transform: scale(0.7);
   }
 }
 
@@ -58,7 +58,7 @@ body {
   }
 
   to {
-    transform: scale(.4);
+    transform: scale(0.4);
   }
 }
 
@@ -78,12 +78,9 @@ body {
 }
 
 .expand {
-  animation: cursorAnim3 .5s forwards;
+  animation: cursorAnim3 0.5s forwards;
   border: 2px solid var(--secondary);
 }
-
-
-
 
 :root {
   --primary: #00d1b2;
@@ -91,7 +88,6 @@ body {
   --grey: #333;
   --white: #fff;
 }
-
 
 * {
   margin: 0;
@@ -124,15 +120,14 @@ ul {
   padding: 10px 20px;
   color: #fff;
   font-weight: 700;
-  transition:unset .2s;
+  transition: unset 0.2s;
 }
 
 .portfolio-menu ul li:hover {
   color: var(--grey);
   padding: 12px 20px;
-  text-decoration:line-through;
-  transition:inherit 2s;
-
+  text-decoration: line-through;
+  transition: inherit 2s;
 }
 
 .portfolio-menu ul Li a.nav-link {
@@ -146,7 +141,7 @@ ul {
 }
 
 #portfolio-menu:before {
-  content: '';
+  content: "";
   position: absolute;
   background: #00000038;
   top: 0;
@@ -163,8 +158,6 @@ p {
   color: var(--white);
 }
 
-
-
 .modal ::-webkit-scrollbar {
   width: 7px;
   background-color: #171616 d5;
@@ -173,7 +166,6 @@ p {
 .modal ::-webkit-scrollbar-thumb {
   background-color: #ccc af;
 }
-
 
 h1,
 h2,
@@ -195,14 +187,16 @@ h6 {
   position: fixed;
   visibility: hidden;
   opacity: 0;
+  top: -100%;
   right: 15px;
   bottom: 15px;
   z-index: 996;
   background: var(--primary);
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50px;
-  transition: all 0.4s;
+  transition: all 1s;
+  cursor: pointer;
 }
 
 .portfolio-header-section.darkHeader {
@@ -219,7 +213,6 @@ h6 {
 
 .portfolio-header-section.darkHeader #logo a {
   font-size: 35px;
-
 }
 
 .portfolio-header-section.darkHeader svg {
@@ -227,7 +220,7 @@ h6 {
 }
 
 .back-to-top i {
-  font-size: 28px;
+  font-size: 32px;
   color: var(--white);
   line-height: 0;
 }
@@ -240,6 +233,7 @@ h6 {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
+  top: 90%;
 }
 
 /*--------------------------------------------------------------
@@ -346,7 +340,7 @@ h6 {
   list-style: none;
 }
 
-.nav-menu>ul>li {
+.nav-menu > ul > li {
   position: relative;
   white-space: nowrap;
 }
@@ -380,7 +374,6 @@ h6 {
 }
 
 @media (min-width: 992px) {
-
   .nav-menu a,
   .nav-menu a:focus {
     width: 56px;
@@ -396,7 +389,7 @@ h6 {
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   color: var(--white);
   background: var(--primary);
 }
@@ -404,18 +397,18 @@ h6 {
 .nav-menu a:hover span,
 .nav-menu .active span,
 .nav-menu .active:focus span,
-.nav-menu li:hover>a span {
+.nav-menu li:hover > a span {
   color: var(--white);
 }
 
 .nav-menu a:hover,
-.nav-menu li:hover>a {
+.nav-menu li:hover > a {
   width: 100%;
   color: var(--white);
 }
 
 .nav-menu a:hover span,
-.nav-menu li:hover>a span {
+.nav-menu li:hover > a span {
   display: block;
 }
 
@@ -443,9 +436,7 @@ h6 {
   right: 50px;
   top: 35px;
   font-size: 40px;
-
 }
-
 
 .darkHeader .mobile-nav-toggle.bi-list {
   top: 15px;
@@ -487,7 +478,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, 0.3);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -501,12 +492,13 @@ h6 {
   font-weight: 700;
   line-height: 56px;
   color: var(--grey);
+  padding-bottom: 5px;
 }
 
 #hero p {
   color: var(--grey);
-  margin: 15px 0 0 0;
-  font-size: 26px;
+  margin: 15px 0 10px 0;
+  font-size: 30px;
   font-family: "Poppins", sans-serif;
 }
 
@@ -520,7 +512,7 @@ h6 {
 }
 
 #hero .social-links a {
-  font-size: 24px;
+  font-size: 33px;
   display: inline-block;
   color: var(--grey);
   line-height: 1;
@@ -530,6 +522,7 @@ h6 {
 
 #hero .social-links a:hover {
   color: var(--primary);
+  scale: 1.3;
 }
 
 @media (max-width: 992px) {
@@ -570,7 +563,7 @@ section {
   padding-bottom: 20px;
   position: relative;
   color: var(--grey);
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   word-spacing: 3px;
 }
 
@@ -651,9 +644,8 @@ section {
 .ftco-counter .ftco-label {
   font-size: 12px;
   text-transform: uppercase;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
-
 
 /*****************/
 /*     About     */
@@ -687,7 +679,6 @@ section {
 .basic-1 h6 {
   margin-bottom: 0.125rem;
 }
-
 
 /*--------------------------------------------------------------
 # About
@@ -739,7 +730,7 @@ section {
 /* # Statics  */
 /* ---------------------------------- */
 .statics {
-  background-image: url('../img//bg_1.jpg');
+  background-image: url("../img//bg_1.jpg");
   background-size: cover;
   padding: 4rem 0;
 }
@@ -1032,7 +1023,6 @@ section {
   padding-top: 10px;
 }
 
-
 /* --------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
@@ -1044,7 +1034,6 @@ section {
 /* --------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
-
 
 .basic-2 {
   padding-top: 2.75rem;
@@ -1065,7 +1054,7 @@ section {
   height: 100%;
   padding: 3.5rem 1rem 2.125rem 1rem;
   border: 1px solid #cfd7de;
-  transition: all .6s;
+  transition: all 0.6s;
   transform: scale(1);
 }
 
@@ -1252,7 +1241,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1397,13 +1386,14 @@ section {
 button[type="submit"] {
   background: var(--primary);
   border: 0;
-  padding: 8px 30px;
+  padding: 8px 40px;
   color: var(--white);
   transition: 0.4s;
   border-radius: 8px;
-  transition: all .9s;
+  transition: all 0.9s;
   font-weight: 700;
   border: 1px solid var(--primary);
+  font-size: 20px;
 }
 
 button[type="submit"]:hover {
@@ -1411,12 +1401,9 @@ button[type="submit"]:hover {
   border-color: var(--secondary);
 }
 
-
-
 /* 
     Modal
 */
-
 
 .modal {
   background: #00000080;
@@ -1556,7 +1543,7 @@ button[type="submit"]:hover {
 }
 
 .modal-body .card-wrapper .card-heading span::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 85%;
   height: 2px;
@@ -1666,7 +1653,7 @@ button[type="submit"]:hover {
 }
 
 .modal-body .card-experience .experience-list li .list-content::after {
-  content: '';
+  content: "";
   border-right: 3px solid;
   color: var(--primary);
   position: absolute;
@@ -1739,7 +1726,7 @@ button[type="submit"]:hover {
 }
 
 .modal-body .card-services .services-wrapper .service .profile::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 2px;
   background: #ccc 3b;
@@ -1768,16 +1755,13 @@ button[type="submit"]:hover {
 
 .colorlib-services {
   background-color: #f7f7f7;
-
 }
-
-
 
 .colorlib-services .services {
   margin-bottom: 40px;
   padding: 2em;
   background: #fff;
-  transition: all .4s;
+  transition: all 0.4s;
   transform: scale(0.95);
   border-radius: 1px;
 }
@@ -1786,8 +1770,6 @@ button[type="submit"]:hover {
   box-shadow: 0 0 20px 6px #00000011 inset;
   transform: scale(1.05);
   border-radius: 6px;
-
-
 }
 
 .colorlib-services .services .desc h3 a {
@@ -1806,7 +1788,6 @@ button[type="submit"]:hover {
   color: #0000009e;
 }
 
-
 .services .desc h3 {
   line-height: 1.3;
   font-size: 13px;
@@ -1822,7 +1803,7 @@ button[type="submit"]:hover {
   bottom: -15px;
   left: 0;
   right: 0;
-  content: '';
+  content: "";
   width: 30px;
   height: 1px;
   background: #000;

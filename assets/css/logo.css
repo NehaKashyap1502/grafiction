@@ -1,0 +1,12 @@
+.logo-Images {
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.logo-Images img {
+    max-width: 100%;
+}
